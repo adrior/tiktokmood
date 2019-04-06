@@ -1,0 +1,10 @@
+.PumButton {
+  color: #eed;
+  line-height: 44px;
+  cursor: pointer;
+  letter-spacing: 0.1ch;
+  &_playing {
+    font-weight: bold;
+    color: #fff;
+  }
+}

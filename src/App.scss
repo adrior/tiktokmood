@@ -1,0 +1,14 @@
+body {
+  background: #233;
+}
+
+.App {
+  text-align: center;
+
+  &__logo {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    height: 40px;
+    background: url("/tiktoklogo-sign.svg") center no-repeat;
+  }
+}
