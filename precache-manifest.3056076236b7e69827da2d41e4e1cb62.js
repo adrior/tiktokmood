@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/tiktokmood/static/js/runtime~main.a824137e.js"
   },
   {
-    "revision": "067247f42dc3660da617",
-    "url": "/tiktokmood/static/js/main.f7afaf71.chunk.js"
+    "revision": "5195af8cc2e218fe3d9c",
+    "url": "/tiktokmood/static/js/main.b718987d.chunk.js"
   },
   {
     "revision": "457f2c7c2e92150c3e77",
     "url": "/tiktokmood/static/js/2.302e92a2.chunk.js"
   },
   {
-    "revision": "067247f42dc3660da617",
+    "revision": "5195af8cc2e218fe3d9c",
     "url": "/tiktokmood/static/css/main.29bb9fe2.chunk.css"
   },
   {
-    "revision": "5f8fb953345a85bc56feb4d599387708",
+    "revision": "4ab655a32f3b61ed26fbd64d39babb45",
     "url": "/tiktokmood/index.html"
   }
 ];

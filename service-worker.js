@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/tiktokmood/precache-manifest.3bd791ca573e5bb2ce6ad2f72cd822d8.js"
+  "/tiktokmood/precache-manifest.3056076236b7e69827da2d41e4e1cb62.js"
 );
 
 workbox.clientsClaim();
