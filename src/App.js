@@ -1,21 +1,13 @@
 import React, { Component } from "react";
 import "./App.scss";
 import PumButton from "./Blocks/PumButton/PumButton.js";
+import sounds from "./sounds.json";
 
 class App extends Component {
   constructor(props) {
     super(props);
 
-    this.sounds = [
-      "wannabe",
-      "boomboomgirs",
-      "crandles",
-      "fly",
-      "letsgo",
-      "mix",
-      "memory",
-      "fbiopenup"
-    ];
+    this.sounds = sounds;
     this.state = {};
     this.sounds.forEach(el => {
       this.prev = null;
@@ -44,7 +36,7 @@ class App extends Component {
         {this.sounds.map(sound => (
           <PumButton
             key={sound}
-            audio={`/sounds/${sound}.mp3`}
+            audio={`sounds/${sound}.mp3`}
             handlePlay={this.handlePlay}
             name={sound}
             isPlaying={this.state[sound].isPlaying}

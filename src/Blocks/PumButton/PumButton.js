@@ -8,6 +8,12 @@ class PumButton extends Component {
     this.audioNode = React.createRef();
   }
 
+  componentDidMount() {
+    this.audioNode.current.addEventListener("ended", e => {
+      this.props.handlePlay(this.props.name);
+    });
+  }
+
   play = () => {
     this.audioNode.current.play();
   };
