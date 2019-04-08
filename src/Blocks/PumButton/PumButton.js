@@ -2,11 +2,7 @@ import React, { Component } from "react";
 import "./PumButton.scss";
 
 class PumButton extends Component {
-  constructor(props) {
-    super(props);
-
-    this.audioNode = React.createRef();
-  }
+  audioNode = React.createRef();
 
   componentDidMount() {
     this.audioNode.current.addEventListener("ended", e => {
@@ -38,9 +34,7 @@ class PumButton extends Component {
   render() {
     return (
       <div
-        className={`PumButton PumButton_${
-          this.props.isPlaying ? "playing" : ""
-        }`}
+        className={`PumButton ${this.props.isPlaying && "PumButton_playing"}`}
         onClick={this.handlePlay}
       >
         <audio ref={this.audioNode} src={this.props.audio} />

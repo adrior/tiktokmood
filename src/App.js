@@ -4,42 +4,27 @@ import PumButton from "./Blocks/PumButton/PumButton.js";
 import sounds from "./sounds.json";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.sounds = sounds;
-    this.state = {};
-    this.sounds.forEach(el => {
-      this.prev = null;
-      this.state[el] = { isPlaying: false };
-    });
-  }
+  state = {
+    currentSound: null
+  };
 
   handlePlay = name => {
-    if (this.state[name].isPlaying) {
-      this.setState({ [name]: { isPlaying: false } });
-    } else {
-      this.setState({ [name]: { isPlaying: true } });
-      if (this.prev && name !== this.prev) {
-        this.setState({ [this.prev]: { isPlaying: false } });
-        this.prev = name;
-      } else {
-        this.prev = name;
-      }
-    }
+    this.setState({
+      currentSound: this.state.currentSound === name ? null : name
+    });
   };
 
   render() {
     return (
       <div className="App">
         <div className="App__logo" />
-        {this.sounds.map(sound => (
+        {sounds.map(sound => (
           <PumButton
             key={sound}
             audio={`sounds/${sound}.mp3`}
             handlePlay={this.handlePlay}
             name={sound}
-            isPlaying={this.state[sound].isPlaying}
+            isPlaying={this.state.currentSound === sound}
           >
             {sound.toUpperCase()}
           </PumButton>
